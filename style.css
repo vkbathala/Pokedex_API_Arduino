@@ -49,6 +49,12 @@ h1 {
     font-weight: lighter;
 }
 
+.card-subtitle-2 {
+    margin-top: 5px;
+    color: #666;
+    font-weight: lighter;
+}
+
 .card-image {
     height: 180px;
 }
