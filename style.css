@@ -96,6 +96,7 @@ h1 {
 
 .display-it {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
+    
 }
