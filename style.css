@@ -1,5 +1,5 @@
 body {
-    background-color: orangered;
+    background-color: #ffffff;
     color: white;
     margin: 0;
     font-family: rubik;
@@ -14,6 +14,7 @@ h1 {
     text-transform: uppercase;
     text-align: center;
     font-size: 54px;
+    color: #d91515;
 }
 
 #pokedex {
@@ -33,6 +34,7 @@ h1 {
 
 .card:hover {
     animation: bounce 0.5s linear;
+    background-color: #d91515;
 }
 
 .card-title {
