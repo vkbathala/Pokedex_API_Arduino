@@ -66,11 +66,36 @@ const displayMore = (pokemon) => {
     pokedex.innerHTML = pokemonHTMLString;
 }
 
-pokeBtn.addEventListener("click", ()=> {
+pokeBtn.addEventListener("click", () => {
     fetchMore();
 })
 
-next_button.addEventListener("click", ()=> {
+const x = 500;
+
+const movePkm = () => {
+    if (x < 200) {
+        if (!haveMoved) {
+            num++;
+            haveMoved = true;
+        }
+    } else if (x > 1000) {
+        if (!haveMoved) {
+            num--;
+            haveMoved = true;
+        }
+    } else {
+        haveMoved = false;
+    }
+}
+const addButton = document.querySelector("#add-button")
+
+addButton.addEventListener("pointerdown", (event) => {
+    x = 100;
+})
+
+movePkm(fetchPokemon);
+/*
+next_button.addEventListener("click", () => {
     if (num < 898) {
         num++;
         console.log("Pokemon Number: " + num);
@@ -78,13 +103,13 @@ next_button.addEventListener("click", ()=> {
     }
 })
 
-prev_button.addEventListener("click", ()=> {
+prev_button.addEventListener("click", () => {
     if (num > 1)
         num--;
     console.log("Pokemon Number: " + num);
     fetchPokemon();
 })
-
+*/
 fetchPokemon();
 
 

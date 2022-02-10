@@ -21,9 +21,7 @@ h1 {
     color: #d91515;
 }
 
-.main {
 
-}
 
 #next-button {
     display: inline-block;
@@ -93,4 +91,11 @@ h1 {
     100% {
         transform: translateY(0);
     }
+}
+
+
+.display-it {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
