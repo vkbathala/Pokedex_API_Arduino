@@ -6,8 +6,12 @@ body {
 }
 
 .container {
-    padding: 40px;
-    margin: 0 auto;
+    /*padding: 40px;*/
+    /*margin: 0 auto;*/
+    display: inline-block;
+    width: 34.35%;
+    margin-left: 31%;
+    margin-right: 31%;
 }
 
 h1 {
@@ -16,6 +20,21 @@ h1 {
     font-size: 54px;
     color: #d91515;
 }
+
+.main {
+
+}
+
+#next-button {
+    display: inline-block;
+}
+
+#prev-button {
+    display: inline-block;
+    border: none;
+}
+
+
 
 #pokedex {
     display: grid;
@@ -30,11 +49,12 @@ h1 {
     background-color: #f4f4f4;
     color: #222;
     text-align: center;
+
 }
 
 .card:hover {
     animation: bounce 0.5s linear;
-    background-color: #d91515;
+    background-color: #b0afaf;
 }
 
 .card-title {
