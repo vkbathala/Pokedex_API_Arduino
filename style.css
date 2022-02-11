@@ -53,7 +53,8 @@ h1 {
 
 .card:hover {
     animation: bounce 0.5s linear;
-    background: radial-gradient(farthest-corner at 512px 512px, rgb(219, 185, 91) 0%, rgb(212, 145, 81) 55%, rgb(204, 87, 71) 100%)
+    background: radial-gradient(farthest-corner at 512px 512px, rgb(219, 185, 91) 0%, rgb(212, 145, 81) 55%, rgb(204, 87, 71) 100%);
+    cursor: none;
 }
 
 .card-title {
