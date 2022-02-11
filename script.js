@@ -110,7 +110,9 @@ const fetchMore = () => {
             image: result.sprites['front_default'],
             type: result.types.map((type) => type.type.name).join(', '),
             id: result.id,
-            weight: result.weight
+            weight: result.weight,
+            height: result.height,
+            base_experience: result.base_experience
         }));
         
         displayMore(pokemon);
@@ -144,7 +146,10 @@ const displayMore = (pokemon) => {
             <img class="card-image" src="${pokemon.image}"/>
             <h2 class="card-title">#${pokemon.id} ${pokemon.name}</h2>
             <p class="card-subtitle">Type: ${pokemon.type}</p>
-            <p class="card-subtitle">Weight: ${pokemon.weight}</p>
+            <p class="card-subtitle">Weight: ${pokemon.weight}</p> 
+            <p class="card-subtitle">Height: ${pokemon.height}</p>
+            <p class="card-subtitle">Base Experience: ${pokemon.base_experience}</p>
+  
         </li>
     `
         )
