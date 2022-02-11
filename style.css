@@ -65,13 +65,13 @@ h1 {
 }
 .card-subtitle {
     margin-top: 5px;
-    color: #666;
+    color: rgb(65, 65, 65);
     font-weight: lighter;
 }
 
 .card-subtitle-2 {
     margin-top: 5px;
-    color: #666;
+    color: rgb(65, 65, 65);
     font-weight: lighter;
 }
 
