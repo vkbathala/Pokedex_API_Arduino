@@ -19,7 +19,11 @@ requestPortButton.addEventListener("pointerdown", async (event) => {
 
     await state.serial.open({ baudRate: 9600 });
 
-    await readJSONFromArduino("joystick", getXAxis);
+    await readJSONFromArduino("joystick", async (json) => {
+        movePkm();
+        morePkm();
+        writeJSONToArduino("dataToWrite");
+    });
 
 });
 
@@ -55,12 +59,13 @@ const readJSONFromArduino = async (propertyName, callback) => {
             const json = JSON.parse(line);
             state[propertyName] = json;
             callback(json);
-            movePkm();
-            morePkm();
+
         }
     }
 
 }
+
+
 
 const state = {
     dataToWrite: {
@@ -116,7 +121,7 @@ const fetchMore = () => {
         }));
         
         displayMore(pokemon);
-        
+        pkmWeight();
     });
 }
 
@@ -219,7 +224,7 @@ const mapRange = (value, fromLow, fromHigh, toLow, toHigh) => {
 
 const setLEDToPkmWeight = async (weight) => {
     state.dataToWrite.brightness = mapRange(weight, 0, 1500, 0, 255);
-    writeJSONToArduino("dataToWrite");
+   
     console.log(weight)
 } // <-----
 
