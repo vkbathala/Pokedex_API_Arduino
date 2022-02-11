@@ -3,22 +3,21 @@ body {
     color: white;
     margin: 0;
     font-family: rubik;
+    
 }
 
 .container {
-    /*padding: 40px;*/
-    /*margin: 0 auto;*/
-    display: inline-block;
-    width: 34.35%;
-    margin-left: 31%;
-    margin-right: 31%;
+    padding: 40px;
+    margin: 0 auto;
 }
 
 h1 {
     text-transform: uppercase;
     text-align: center;
     font-size: 54px;
-    color: #d91515;
+    background: -webkit-linear-gradient(rgb(201, 57, 57), rgb(214, 153, 40));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 
@@ -47,12 +46,12 @@ h1 {
     background-color: #f4f4f4;
     color: #222;
     text-align: center;
-
+    border-radius: 25px;
 }
 
 .card:hover {
     animation: bounce 0.5s linear;
-    background-color: #b0afaf;
+    background: radial-gradient(farthest-corner at 512px 512px, rgb(219, 185, 91) 0%, rgb(212, 145, 81) 55%, rgb(204, 87, 71) 100%)
 }
 
 .card-title {
@@ -77,6 +76,10 @@ h1 {
     height: 180px;
 }
 
+
+
+
+
 @keyframes bounce {
     20% {
         transform: translateY(-6px);
@@ -93,10 +96,3 @@ h1 {
     }
 }
 
-
-.display-it {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-}
